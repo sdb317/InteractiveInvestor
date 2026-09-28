@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "postgresql-mcp": {
+      "command": "npx",
+      "args": [
+        "@henkey/postgres-mcp-server",
+        "--connection-string", "postgresql://postgres:postgres@localhost:5432/interactive_investor?sslmode=disable"
+      ]
+    }
+  }
+}
