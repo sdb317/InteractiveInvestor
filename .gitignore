@@ -1,0 +1,5 @@
+data/
+env/
+commands.txt
+*.pyc
+db.sqlite3
