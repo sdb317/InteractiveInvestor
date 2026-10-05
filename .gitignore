@@ -1,5 +1,6 @@
 data/
 env/
+node_modules/
 _launch.bat
 commands.txt
 *.pyc
