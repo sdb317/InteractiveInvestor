@@ -1,0 +1,47 @@
+// Bootswatch Zephyr theme (https://bootswatch.com/zephyr/).
+//
+// Bootswatch ships each theme as two SCSS partials that are designed to be
+// layered around Bootstrap in a specific order:
+//   1. zephyr/_variables.scss  -> overrides Bootstrap's `!default` variables
+//   2. bootstrap               -> the framework, compiled with those overrides
+//   3. zephyr/_bootswatch.scss  -> Zephyr's component-level tweaks on top
+//
+// Those partials reference Bootstrap variables/mixins unqualified (e.g.
+// `$font-size-sm`, `$border-radius`), so they must share Bootstrap's Sass
+// scope. `@import` keeps them all in one global scope, which is exactly what
+// the Bootswatch partials expect.
+@import 'bootswatch/dist/zephyr/variables';
+@import 'bootstrap/scss/bootstrap';
+@import 'bootswatch/dist/zephyr/bootswatch';
+
+html,
+body {
+  margin: 0;
+  min-height: 100vh;
+  min-height: 100dvh; // dynamic viewport height for mobile browser chrome
+}
+
+body {
+  -webkit-text-size-adjust: 100%; // prevent iOS font scaling on rotate
+  -webkit-tap-highlight-color: transparent;
+}
+
+.app {
+  &__title {
+    font-size: clamp(1.75rem, 6vw, 2.5rem);
+    font-weight: 700;
+  }
+}
+
+// The Run Dialog's streamed transcript. The output is unbounded agent text, so
+// the pane scrolls on its own rather than growing the dialog: `pre` keeps the
+// whitespace the agent emitted, and the wrap keeps a long line from pushing a
+// horizontal scrollbar across the panel.
+.run-investment-dialog {
+  &__output {
+    max-height: 18rem;
+    overflow-y: auto;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+  }
+}

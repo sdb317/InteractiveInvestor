@@ -6,6 +6,17 @@
         "@henkey/postgres-mcp-server",
         "--connection-string", "postgresql://postgres:postgres@localhost:5432/interactive_investor?sslmode=disable"
       ]
+    },
+    "aws-mcp": {
+      "type": "stdio",
+      "command": "uvx",
+      "args": [
+        "mcp-proxy-for-aws-cli==1.7.0",
+        "https://aws-mcp.us-east-1.api.aws/mcp",
+        "--skip-auth",
+        "--metadata",
+        "INSTALL_SOURCE=agent-toolkit-core"
+      ]
     }
   }
 }

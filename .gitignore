@@ -1,5 +1,6 @@
 data/
 env/
+_launch.bat
 commands.txt
 *.pyc
 db.sqlite3
