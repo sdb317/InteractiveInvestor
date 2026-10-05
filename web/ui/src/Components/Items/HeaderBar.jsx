@@ -23,14 +23,16 @@ function HeaderBar({ project, onNew, onOpen, onHelp }) {
   return (
     <Navbar bg="dark" data-bs-theme="dark">
       <Container>
+        {/*
         <Navbar.Brand className="d-flex align-items-center p-0 me-2">
           <img
-            src="/vendor/images/wipo-logo-e-bold-white.svg"
+            src=".svg"
             height="64"
-            alt="WIPO"
+            alt=""
           />
         </Navbar.Brand>
-        <Navbar.Brand href="#home">SWAP.Create</Navbar.Brand>
+        */}
+        <Navbar.Brand href="#home">Investments</Navbar.Brand>
         <Nav className="me-auto">
           <Nav.Link as="button" onClick={onNew}>New</Nav.Link>
           <Nav.Link as="button" onClick={onOpen}>Open</Nav.Link>
