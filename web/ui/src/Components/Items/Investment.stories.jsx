@@ -24,6 +24,9 @@ export default {
   title: 'Components/Items/Investment',
   component: Investment,
   decorators: [inTable],
+};
+
+export const Default = {
   args: {
     investment: { name: 'sep-summary', deployedAt: '2026-01-14T09:20:00Z' },
     onRun: noop,
